@@ -1,13 +1,10 @@
-Restart *no*: (DEFAULT)
-#######################
+## Restart *no*: (DEFAULT)
 
 Docker container won't restart after it's stopped
 
 ---
 
-Restart *unless-stopped* policy:
-##############################
-
+## Restart *unless-stopped* policy:
 
 `$ docker container run -d --name testing-restart --restart unless-stopped nginx`
 f69561d075f4c2a91d56693ca7fa6b0385b24ca704abca13cbec54bcb3a33a3d
@@ -37,8 +34,7 @@ f69561d075f4   nginx     "/docker-entrypoint.…"   About a minute ago   Up 1 se
 
 ---
 
-Restart *on-failure* policy:
-##########################
+## Restart *on-failure* policy:
 
 For this example, we first build a docker image which is located at on-failure folder.
 So, we first move to that folder and start executing the following commands:
@@ -94,8 +90,7 @@ c550491b1f14   python-failure   "python ./main.py"   15 seconds ago   Up Less th
 
 ---
 
-Restart *always* policy:
-######################
+## Restart *always* policy:
 
 It will always restart, even if docker is restarted. That last part is what
 makes it particularly useful and different.
